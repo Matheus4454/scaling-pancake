@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main # ou qulquer outra branch
+permissions:
+  contents: read
 jobs:
   deliver:
     runs-on: ubuntu-latest
