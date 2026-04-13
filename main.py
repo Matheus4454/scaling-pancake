@@ -17,4 +17,4 @@ def read_item(item_id: int, q: str | None = None):
 # 127.0.0.1:8000/teste1
 @app.get("/teste1")
 async def funcaoteste():
-    return {"teste": True, "numero_aleatorio": list(range(0, 10))}
+    return {"teste": True, "numero_aleatorio": list(range(0, 15))}
