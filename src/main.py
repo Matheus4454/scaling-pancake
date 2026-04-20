@@ -31,6 +31,6 @@ async def create_estudante(estudante: Estudante):
     return estudante
 
 
-@app.delete("/estudantes/delete/{id_estudante}")
-async def delete_estudante(id_estudante: int):
-    return id_estudante > 0
+@app.delete("/estudantes/delete/{name_estudante}")
+async def delete_estudante(name_estudante: str):
+    return name_estudante > Estudante.name
