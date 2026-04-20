@@ -31,6 +31,25 @@ async def test_create_estudante():
 
 
 @pytest.mark.asyncio
-async def test_delete_estudante():
-    result = await delete_estudante("Ciclano")
+async def test_update_estudante_positivo():
+    result = await update_estudante(10)
+    assert result
+
+
+@pytest.mark.asyncio
+async def test_update_estudante_negativo():
+    result = await update_estudante(-5)
+    assert result
+
+
+
+@pytest.mark.asyncio
+async def test_delete_estudante_negativo():
+    result = await delete_estudante(-5)
+    assert result
+
+
+@pytest.mark.asyncio
+async def test_delete_estudante_positivo():
+    result = await delete_estudante(5)
     assert result
