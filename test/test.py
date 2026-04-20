@@ -10,7 +10,7 @@ def test_read_root():
 
 def test_read_item():
     result = read_item(1, None)
-    assert result == {1, None}
+    assert result == {"item_id": 1, "q": None}
 
 
 @pytest.mark.asyncio
