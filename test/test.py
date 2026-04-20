@@ -21,3 +21,22 @@ async def test_funcaoteste():
         result = await funcaoteste()
 
     assert result == {"teste": True, "numero_aleatorio": 12345}
+
+
+@pytest.mark.asyncio
+async def test_create_estudante():
+    estudante_teste = Estudante(name="Ciclano", curso="ADS", ativo=True)
+    result = await create_estudante(estudante_teste)
+    assert estudante_teste == result
+
+
+@pytest.mark.asyncio
+async def test_delete_estudante_positivo():
+    result = await delete_estudante(5)
+    assert result
+
+
+@pytest.mark.asyncio
+async def test_delete_estudante_negativo():
+    result = await delete_estudante(-5)
+    assert result
