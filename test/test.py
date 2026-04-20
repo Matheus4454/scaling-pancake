@@ -1,15 +1,17 @@
 import pytest
-
 from src.main import *
 from unittest.mock import patch
 
-def test_read_root():
-    result = read_root()
+
+@pytest.mark.asyncio
+async def test_read_root():
+    result = await read_root()
     assert result == {"message": "Olá Mundo!"}
 
 
-def test_read_item():
-    result = read_item(1, None)
+@pytest.mark.asyncio
+async def test_read_item():
+    result = await read_item(1, None)
     assert result == {"item_id": 1, "q": None}
 
 
