@@ -2,7 +2,7 @@ from src.main import *
 from unittest.mock import patch
 
 
-def test_root():
+def test_read_root():
     result = read_root()
     yield  result
     assert result == {"message": "Olá Mundo!"}
